@@ -1,0 +1,15 @@
+input{
+    border: none;
+    outline: none;
+    font-family: inherit;
+    height: 2.5rem;
+    width: 30%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+
+::placeholder{
+    color: wheat;
+}

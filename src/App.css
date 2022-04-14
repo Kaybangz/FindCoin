@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+  --darkmode-navbar-background-color: #161B22;
+  --lightmode-navbar-background-color: #cac4c8;
+  --darkmode-background: #0D1117;
+  --lightmode-background: white;
+  --lightmode-text-color: black;
+  --darkmode-text-color: white;
+  --span-color: #2141a1;
+  --lightmode-input: #a8a2a2;
+  --darkmode-input: #0D1117;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Rubik", "sans-serif";
+  font-size: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.main__wrapper{
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto 3rem auto;
+}
+
+#lightTheme{
+  background-color: var(--lightmode-background);
+}
+
+#darkTheme{
+  background-color: var(--darkmode-background);
+}
+
+#lightTheme nav{
+  background-color: var(--lightmode-navbar-background-color);
+}
+
+#darkTheme nav{
+  background-color: var(--darkmode-navbar-background-color);
+}
+
+#lightTheme h1, #lightTheme h2{
+  color: black;
+}
+
+#darkTheme h1, #darkTheme h2{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#lightTheme nav h1 span{
+  color: var(--span-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#darkTheme nav h1 span{
+  color: var(--span-color);
+}
+
+#lightTheme select{
+  background-color: var(--lightmode-input);
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme select{
+  background-color: var(--darkmode-input) !important;
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme input{
+  background-color: var(--lightmode-navbar-background-color);
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme input{
+  background-color: var(--darkmode-navbar-background-color) !important;
+  color: var(--darkmode-text-color);
+}
+
+
+#lightTheme .toggleBtn{
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme .toggleBtn{
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme p{
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme p{
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme .heading{
+  background-color: var(--lightmode-navbar-background-color);
+
+}
+
+#darkTheme .heading{
+  background-color: var(--darkmode-navbar-background-color);
+}
+
+#lightTheme .coin__row{
+  background-color: var(--lightmode-navbar-background-color);
+
+}
+
+#darkTheme .coin__row{
+  background-color: var(--darkmode-navbar-background-color);
 }
