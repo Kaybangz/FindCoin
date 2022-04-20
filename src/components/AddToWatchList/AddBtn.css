@@ -1,0 +1,26 @@
+#addBtn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #b78700;
+}
+
+button.shake{
+    animation: shake 1s ease-in-out;
+    
+}
+
+@keyframes shake {
+  0%  { transform: scale(1);  }
+  30% {  transform: scale(.8); }
+  50%{ transform: scale(1.1); }
+  100%{ transform: scale(1); }
+}
+
+@media screen and (max-width: 650px){
+    button{
+        font-size: 1.1rem;
+    }
+}

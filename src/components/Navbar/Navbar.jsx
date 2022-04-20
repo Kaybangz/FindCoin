@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
-import SearchInput from "../SearchInput/SearchInput";
 import { Link } from "react-router-dom";
 import LDmodeBtn from "../LDModeBtn/LDModeBtn";
+import { CurrencyContext } from "../../CurrencyContext/CurrencyContext";
 
-const Navbar = ({toggleBtnClick, toggleTheme, isToggled}) => {
+const Navbar = () => {
+  const currencyContext = useContext(CurrencyContext);
+
   return (
     <nav>
       <section className="nav__container">
@@ -15,18 +17,32 @@ const Navbar = ({toggleBtnClick, toggleTheme, isToggled}) => {
         </Link>
 
         <div>
-          <h2>Portfolio</h2>
+          <Link to="/watchlist" className="watchlist__heading">
+            <h2>Watchlist</h2>
+          </Link>
         </div>
 
         <div className="nav__tools">
-  
-          <select name="currencies" id="currencies">
-            <option value="ngn">NGN</option>
-            <option value="usd">USD</option>
-            <option value="dol">DOL</option>
-            <option value="zmb">ZMB</option>
+          <select
+            name="currencies"
+            id="currencies"
+            value={currencyContext.currencyValue}
+            onChange={(e) => currencyContext.setCurrencyValue(e.target.value)}
+          >
+                <option value="usd">
+                  USD
+                </option>
+
+                <option value="eur">
+                  EUR
+                </option>
+
+                <option value="ngn">
+                  NGN
+                </option>
+              );
           </select>
-          <LDmodeBtn/>
+          <LDmodeBtn />
         </div>
       </section>
     </nav>

@@ -6,15 +6,27 @@
    padding: 15px;
    margin-bottom: 2rem;
    font-weight: 700;
-   font-size: clamp(1.1rem, .7rem, .5rem)
+   font-size: clamp(1rem, .7rem, .5rem)
 }
 
 .coin__name{
     margin-left: -4rem;
 }
 
+.heading p{
+    flex: 1;
+}
+
+.single_coin_link{
+    text-decoration: none;
+}
+
 @media screen and (max-width: 700px){
     .hide__mobile{
         display: none;
+    }
+
+    .coin__name{
+        margin-left: -1.7rem;
     }
 }

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
-:root{
+:root {
   --darkmode-navbar-background-color: #161B22;
-  --lightmode-navbar-background-color: #cac4c8;
+  --lightmode-navbar-background-color: #b9b7b9;
   --darkmode-background: #0D1117;
   --lightmode-background: white;
   --lightmode-text-color: black;
@@ -23,104 +23,239 @@
 }
 
 body {
-  font-family: "Rubik", "sans-serif";
+  font-family: "Work Sans", "sans-serif";
   font-size: 10px;
+  height: 100vh;
+  position: relative;
 }
 
-.main__wrapper{
-  height: 100%;
-  width: 100%;
-}
-
-.container{
-  max-width: 1200px;
-  width: 95%;
-  margin: 0 auto 3rem auto;
-}
-
-#lightTheme{
+#lightTheme {
   background-color: var(--lightmode-background);
+  height: 100%;
+  min-height: 100vh;
 }
 
-#darkTheme{
+#darkTheme {
   background-color: var(--darkmode-background);
+  height: 100%;
+  min-height: 100vh;
 }
 
-#lightTheme nav{
+#lightTheme nav {
   background-color: var(--lightmode-navbar-background-color);
+  box-shadow: 0 0 10px var(--lightmode-navbar-background-color);
 }
 
-#darkTheme nav{
+#darkTheme nav {
   background-color: var(--darkmode-navbar-background-color);
+  box-shadow: 0 0 10px var(--darkmode-navbar-background-color);
 }
 
-#lightTheme h1, #lightTheme h2{
-  color: black;
+#lightTheme nav h1,
+#lightTheme nav h2 {
+  color: var(--lightmode-text-color);
 }
 
-#darkTheme h1, #darkTheme h2{
-  color: white;
+#darkTheme nav h1,
+#darkTheme nav h2 {
+  color: var(--darkmode-text-color);
 }
 
-#lightTheme nav h1 span{
+#lightTheme nav h1 span {
   color: var(--span-color);
 }
 
-#darkTheme nav h1 span{
+#darkTheme nav h1 span {
   color: var(--span-color);
 }
 
-#lightTheme select{
+#lightTheme select {
   background-color: var(--lightmode-input);
   color: var(--lightmode-text-color);
 }
 
-#darkTheme select{
+#darkTheme select {
   background-color: var(--darkmode-input) !important;
   color: var(--darkmode-text-color);
 }
 
-#lightTheme input{
+#lightTheme input {
   background-color: var(--lightmode-navbar-background-color);
   color: var(--lightmode-text-color);
 }
 
-#darkTheme input{
+#darkTheme input {
   background-color: var(--darkmode-navbar-background-color) !important;
   color: var(--darkmode-text-color);
 }
 
+#lightTheme ::placeholder {
+  color: rgb(148, 129, 129);
+}
 
-#lightTheme .toggleBtn{
+#darkTheme ::placeholder {
+  color: rgb(150, 132, 100);
+}
+
+
+#lightTheme .toggleBtn {
   color: var(--lightmode-text-color);
 }
 
-#darkTheme .toggleBtn{
+#darkTheme .toggleBtn {
   color: var(--darkmode-text-color);
 }
 
-#lightTheme p{
+#lightTheme p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td {
   color: var(--lightmode-text-color);
 }
 
-#darkTheme p{
+#darkTheme p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td {
   color: var(--darkmode-text-color);
 }
 
-#lightTheme .heading{
+#lightTheme .heading {
   background-color: var(--lightmode-navbar-background-color);
 
 }
 
-#darkTheme .heading{
+#darkTheme .heading {
   background-color: var(--darkmode-navbar-background-color);
 }
 
-#lightTheme .coin__row{
+#lightTheme .coin__row {
   background-color: var(--lightmode-navbar-background-color);
 
 }
 
-#darkTheme .coin__row{
+#darkTheme .coin__row {
   background-color: var(--darkmode-navbar-background-color);
+}
+
+#lightTheme .info,
+#lightTheme .content__two,
+#lightTheme .content__three,
+#lightTheme .content__four,
+#lightTheme .content__five,
+#lightTheme .watchlist_content_container {
+  background-color: var(--lightmode-navbar-background-color);
+  box-shadow: 0 0 8px var(--lightmode-navbar-background-color);
+}
+
+#darkTheme .info,
+#darkTheme .content__two,
+#darkTheme .content__three,
+#darkTheme .content__four,
+#darkTheme .content__five,
+#darkTheme .watchlist_content_container {
+  background-color: var(--darkmode-navbar-background-color);
+  box-shadow: 0 0 8px var(--darkmode-navbar-background-color);
+}
+
+#lightTheme .coin_price h2 {
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme .coin_price h2 {
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme .rank__btn, #lightTheme .coin_name, #lightTheme .about__coin h3 {
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme .rank__btn, #darkTheme .coin_name, #darkTheme .about__coin h3 {
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme .content__two th {
+  color: var(--lightmode-text-color);
+}
+
+#lightTheme .content__two th {
+  background-color: var(--lightmode-background);
+}
+
+#darkTheme .content__two th {
+  background-color: var(--darkmode-background);
+}
+
+#darkTheme .rank__btn, #darkTheme .coin_name {
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme .coin__price h2 {
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme .coin__price h2 {
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme .stats .row {
+  border-bottom: 1px solid var(--lightmode-text-color);
+}
+
+#darkTheme .stats .row {
+  border-bottom: 1px solid var(--darkmode-text-color);
+}
+
+#lightTheme .stats h5, .about__coin h3 {
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme .stats h5, .about__coin h3 {
+  color: var(--darkmode-text-color);
+}
+
+#lightTheme #addBtn {
+  color: #b78700;
+}
+
+#darkTheme #addBtn {
+  color: #eda800;
+}
+
+#lightTheme .alert__msg {
+  background-color: var(--lightmode-navbar-background-color);
+  color: var(--lightmode-text-color);
+  border: 1px solid darkgreen;
+  box-shadow: 0 0 8px darkgreen;
+}
+
+#darkTheme .alert__msg {
+  background-color: var(--darkmode-navbar-background-color);
+  color: var(--darkmode-text-color);
+  border: 1px solid lawngreen;
+  box-shadow: 0 0 8px lawngreen;
+}
+
+#lightTheme .deleteBtn {
+  background-color: var(--lightmode-navbar-background-color);
+  color: var(--lightmode-text-color);
+  border: 1px solid darkgreen;
+  box-shadow: 0 0 3px rgb(0, 58, 0);
+}
+
+#darkTheme .deleteBtn {
+  background-color: var(--darkmode-navbar-background-color);
+  color: var(--darkmode-text-color);
+  border: 1px solid lawngreen;
+  box-shadow: 0 0 3px lawngreen;
 }

@@ -1,6 +1,5 @@
 nav{
     color: white;
-    /* background-color: var(--navbar-background-color); */
     position: fixed;
     top: 0;
     right: 0;
@@ -9,12 +8,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 .nav__container{
-    max-width: 1000px;
-    width: 95%;
-    max-width: 1200px;
+    max-width: 1300px;
+    width: 98%;
     margin: 0 auto;
     display: grid;
     align-items: center;
@@ -36,6 +35,10 @@ nav{
     color: var(--secondary-color);
 }
 
+.watchlist__heading{
+    text-decoration: none;
+}
+
 .nav__container h2{
  display: flex;
  align-items: center;
@@ -47,7 +50,7 @@ nav{
     grid-template-columns: 2fr 2fr 1fr;
     margin: 0 1rem;
     gap: 1rem;
-    justify-items: center;
+    justify-content: center;
     align-content: center;
 }
 
@@ -66,11 +69,11 @@ select{
 }
 
 .toggleBtn{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer;
 }
 
-@media (max-width: 840px){
+@media screen and (max-width: 840px){
     .nav__container{
         grid-template-columns: 1fr 1fr 4fr;
     }
@@ -84,7 +87,7 @@ select{
     }
 }
 
-@media (max-width: 700px){
+@media screen and (max-width: 700px){
     .nav__container{
         width: 97%;
         grid-template-columns: 2fr 2fr 3fr;
@@ -96,5 +99,21 @@ select{
 
     select{
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home__link h1{
+        font-size: 1.2rem;
+    }
+
+    select{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    select{
+        width: 100%;
     }
 }
