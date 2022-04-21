@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FindCoin/static/css/main.c08634cb.css",
+    "main.js": "/FindCoin/static/js/main.a453df77.js",
+    "index.html": "/FindCoin/index.html",
+    "main.c08634cb.css.map": "/FindCoin/static/css/main.c08634cb.css.map",
+    "main.a453df77.js.map": "/FindCoin/static/js/main.a453df77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c08634cb.css",
+    "static/js/main.a453df77.js"
+  ]
+}
