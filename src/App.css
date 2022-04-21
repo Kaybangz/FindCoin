@@ -152,7 +152,6 @@ td {
 #lightTheme .content__two,
 #lightTheme .content__three,
 #lightTheme .content__four,
-#lightTheme .content__five,
 #lightTheme .watchlist_content_container {
   background-color: var(--lightmode-navbar-background-color);
   box-shadow: 0 0 8px var(--lightmode-navbar-background-color);
@@ -162,7 +161,6 @@ td {
 #darkTheme .content__two,
 #darkTheme .content__three,
 #darkTheme .content__four,
-#darkTheme .content__five,
 #darkTheme .watchlist_content_container {
   background-color: var(--darkmode-navbar-background-color);
   box-shadow: 0 0 8px var(--darkmode-navbar-background-color);

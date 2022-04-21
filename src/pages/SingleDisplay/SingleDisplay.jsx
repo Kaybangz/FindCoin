@@ -2,7 +2,6 @@ import React, { useState, useLayoutEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./SingleDisplay.css";
 import axios from "axios";
-import { Line } from "react-chartjs-2";
 import DomPurify from "dompurify";
 import AddBtn from "../../components/AddToWatchList/AddBtn";
 import { AddBtnContext } from "../../AddBtnContext/AddBtnContext";
@@ -18,20 +17,12 @@ const SingleDisplay = () => {
   //Destructure the id from the react-router-dom useParams
   const { id } = useParams();
 
-  //State management for days
-  const [days, setDays] = useState(1);
-
   //Api for displaying a single coin
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
 
-  //Api for displaying a single coin chart
-  const chartURL = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currencyValue}&days=${days}`;
 
   //State management for the single coin
   const [coin, setCoin] = useState({});
-
-  //State management for the coin chart
-  const [coinChart, setCoinChart] = useState([]);
 
   //Function for passing the single coin api to the coin state
   const fetchSingleCoin = async () => {
@@ -39,20 +30,10 @@ const SingleDisplay = () => {
     setCoin(response.data);
   };
 
-  const fetchSingleCoinChart = async () => {
-    const response = await axios.get(chartURL);
-    setCoinChart(response.data.prices);
-  };
-
   //Calling the functions in our useLayoutEffect
   useLayoutEffect(() => {
     fetchSingleCoin();
-    console.log(coinChart);
   }, [url]);
-
-  useLayoutEffect(() => {
-    fetchSingleCoinChart();
-  }, [days, currencyValue]);
 
   return (
     <main className="single_coin_wrapper">
@@ -257,26 +238,9 @@ const SingleDisplay = () => {
           </table>
         </section>
 
-        {/* COIN CHART STARTS HERE */}
-
-        {/* <section className="content__three">
-          <Line
-            data={{
-              labels: coinChart.map((coin) => {
-                let date = new Date(coin[0]);
-                let time =
-                  date.getHours() > 12
-                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                    : `${date.getHours()}:${date.getMinutes()} AM`;
-
-                    return days===1 ? time : date.toLocaleDateString()
-              }),
-            }}
-          />
-        </section> */}
 
         {/* COIN STATS STARTS HERE */}
-        <section className="content__four">
+        <section className="content__three">
           <div className="stats">
             <aside className="left">
               <div className="row">
@@ -369,7 +333,7 @@ const SingleDisplay = () => {
         </section>
 
         {/* COIN ABOUT STARTS HERE */}
-        <section className="content__five">
+        <section className="content__four">
           <div className="about__coin">
             <h3 className="about__header">About</h3>
             <p

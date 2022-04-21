@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import Loading from "../../../components/Loading/Loading";
 
 const CoinList = ({ coinList, searchValue, loading }) => {
-
-
+  //Function for the search input
   const searchedCoin = coinList.filter((coin) => {
-    return coin.name.toLowerCase().includes(searchValue.toLowerCase()) || coin.symbol.toLowerCase().includes(searchValue.toLowerCase());
-  })
+    return (
+      coin.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      coin.symbol.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  });
 
   return (
     <main className="coinList__container">
@@ -23,17 +25,21 @@ const CoinList = ({ coinList, searchValue, loading }) => {
           <p className="hide__mobile">Market Cap</p>
         </section>
 
-        {loading ?  searchedCoin.map((coin) => {
-          return (
-            <Link
-              className="single_coin_link"
-              to={`/coin/${coin.id}`}
-              key={coin.id}
-            >
-              <CoinItem coin={coin} />
-            </Link>
-          );
-        }) : <Loading/>}
+        {loading ? (
+          searchedCoin.map((coin) => {
+            return (
+              <Link
+                className="single_coin_link"
+                to={`/coin/${coin.id}`}
+                key={coin.id}
+              >
+                <CoinItem coin={coin} />
+              </Link>
+            );
+          })
+        ) : (
+          <Loading />
+        )}
       </React.Fragment>
     </main>
   );

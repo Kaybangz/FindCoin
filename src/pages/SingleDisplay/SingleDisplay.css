@@ -18,7 +18,7 @@
 }
 
 .coin_name {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
@@ -87,8 +87,7 @@
 
 .content__two,
 .content__three,
-.content__four,
-.content__five {
+.content__four {
     margin-bottom: 2rem;
     padding: .7rem .6rem;
     border-radius: 5px;

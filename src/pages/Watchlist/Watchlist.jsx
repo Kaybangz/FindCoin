@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AddBtnContext } from "../../AddBtnContext/AddBtnContext";
 import { CurrencyContext } from "../../CurrencyContext/CurrencyContext";
 import "./Watchlist.css";
@@ -7,16 +7,11 @@ const Watchlist = () => {
   const { symbol, currencyValue } = useContext(CurrencyContext);
   const { watchlisted, setWatchlisted } = useContext(AddBtnContext);
 
-  const [isDeleted, setIsDeleted] = useState(false);
-
-  //Delete items from the bookmarked array
+  //Delete coin from the watchlist array
   const deleteCoinHandler = (coin) => {
     const existInWatchlist = watchlisted.filter((item) => item.id !== coin.id);
 
     setWatchlisted(existInWatchlist);
-
-    // setTimeout(() => setIsDeleted(false), 2300);
-    
   };
 
   return (
@@ -42,14 +37,18 @@ const Watchlist = () => {
                   {coin.market_data?.current_price ? (
                     <p>
                       Price: {symbol}
-                      {coin.market_data.current_price[currencyValue.toLowerCase()].toLocaleString()}
+                      {coin.market_data.current_price[
+                        currencyValue.toLowerCase()
+                      ].toLocaleString()}
                     </p>
                   ) : null}
 
                   {coin.market_data?.market_cap ? (
                     <p>
                       Mcap: {symbol}
-                      {coin.market_data.market_cap[currencyValue.toLowerCase()].toLocaleString()}
+                      {coin.market_data.market_cap[
+                        currencyValue.toLowerCase()
+                      ].toLocaleString()}
                     </p>
                   ) : null}
                 </div>
@@ -61,7 +60,6 @@ const Watchlist = () => {
               >
                 Delete from watchlist
               </button>
-              {isDeleted && <p className="alert__msg">{coin.name} deleted</p>}
             </main>
           );
         })}

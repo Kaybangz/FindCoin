@@ -30,6 +30,8 @@ const AddBtn = ({ coin }) => {
     setTimeout(() => setExistInWatchlist(false), 2300);
   };
 
+  
+
   return (
     <button
       id="addBtn"
