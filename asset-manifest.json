@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FindCoin/static/css/main.d017473d.css",
+    "main.css": "/FindCoin/static/css/main.644067ad.css",
     "main.js": "/FindCoin/static/js/main.ea52cbda.js",
     "index.html": "/FindCoin/index.html",
-    "main.d017473d.css.map": "/FindCoin/static/css/main.d017473d.css.map",
+    "main.644067ad.css.map": "/FindCoin/static/css/main.644067ad.css.map",
     "main.ea52cbda.js.map": "/FindCoin/static/js/main.ea52cbda.js.map"
   },
   "entrypoints": [
-    "static/css/main.d017473d.css",
+    "static/css/main.644067ad.css",
     "static/js/main.ea52cbda.js"
   ]
 }
