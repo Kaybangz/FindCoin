@@ -4,6 +4,7 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import "./MainDisplay.css";
 import CoinList from "./CoinList/CoinList";
 import { CurrencyContext } from "../../CurrencyContext/CurrencyContext";
+import Footer from "../../components/Footer/Footer";
 
 const MainDisplay = () => {
   const {currencyValue} = useContext(CurrencyContext);
@@ -46,6 +47,7 @@ const MainDisplay = () => {
         />
         <CoinList coinList={coinList} searchValue={searchValue} loading={loading} />
       </div>
+      <Footer/>
     </main>
   );
 };

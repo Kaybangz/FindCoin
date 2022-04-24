@@ -20,8 +20,8 @@ const CoinList = ({ coinList, searchValue, loading }) => {
           <p>#</p>
           <p className="coin__name">Coin</p>
           <p className="coin__price">Price</p>
-          <p>24h</p>
-          <p className="hide__mobile">Trading Volume</p>
+          <p className="volume">24h</p>
+          <p id className="hide__mobile">Trading Volume</p>
           <p className="hide__mobile">Market Cap</p>
         </section>
 

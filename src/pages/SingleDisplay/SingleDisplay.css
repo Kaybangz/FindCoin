@@ -4,8 +4,8 @@
 }
 
 .single_coin_container {
-    max-width: 900px;
-    width: 95%;
+    max-width: 930px;
+    width: 97%;
     margin: 0 auto;
     padding: 6rem 0;
 }
@@ -18,7 +18,7 @@
 }
 
 .coin_name {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
@@ -31,7 +31,7 @@
 
 .watchlist p {
     margin-left: .4rem;
-    font-size: .9rem;
+    font-size: clamp(.8rem, 2.5vw, 1rem);
     font-weight: 600;
 }
 
@@ -45,7 +45,7 @@
     box-shadow: 0 0 8px var(--span-color);
     padding: 5px;
     border-radius: 5px;
-    font-size: .9rem;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
     font-weight: 700;
 }
 
@@ -71,7 +71,7 @@
 
 .info p {
     margin-right: 1rem;
-    font-size: 1rem;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
 }
 
 .info .coin__price {
@@ -82,7 +82,7 @@
 }
 
 .info .coin__price h2 {
-    font-size: 1.2rem;
+    font-size: clamp(.9rem, 2.5vw, 1.2rem);
 }
 
 .content__two,
@@ -106,13 +106,13 @@ th {
 
 th {
     height: 10px;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     padding: .5rem 0;
     border-radius: 5px;
 }
 
 td {
-    font-size: .9rem;
+    font-size: clamp(.7rem, 2.5vw, 1.1rem);
     font-weight: 600;
     padding-top: 1rem;
 }
@@ -143,31 +143,31 @@ td {
 }
 
 .stats h5 {
-    font-size: 1rem;
+    font-size: clamp(.9rem, 2.5vw, 1.2rem);
     margin-bottom: .2rem;
     font-weight: 600;
 }
 
 .stats p {
-    font-size: .9rem;
+    font-size: clamp(.8rem, 2.5vw, 1rem);
     font-weight: 500;
 }
 
 .about__coin h3 {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: .5rem;
     font-weight: 800;
 }
 
 .about__coin p {
-    font-size: .9rem;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
     padding: .5rem 0;
     line-height: 1.5rem;
     font-weight: 500;
 }
 
 .alert__msg {
-    font-size: 1rem;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
     font-weight: 600;
     position: absolute;
     bottom: 1rem;
@@ -192,29 +192,6 @@ td {
   }
 
 @media screen and (max-width: 650px) {
-
-    .coin_name {
-        font-size: 1.1rem;
-    }
-
-    .watchlist p {
-        font-size: .7rem;
-    }
-
-    .info .coin__price h2 {
-        font-size: 1rem;
-    }
-
-    th {
-        font-size: 1rem;
-    }
-
-    td {
-        font-size: .8rem;
-        font-weight: 600;
-        padding-top: 1rem;
-    }
-
     .stats {
         width: 100%;
         grid-template-columns: 1fr;
@@ -222,22 +199,6 @@ td {
 
     .stats .left {
         margin-bottom: 1.5rem;
-    }
-
-    .stats h5 {
-        font-size: 1.1rem;
-    }
-
-    .stats p {
-        font-size: 1rem;
-    }
-
-    .about__coin h3 {
-        font-size: 1.1rem;
-    }
-
-    .about__coin p {
-        font-size: .9rem;
     }
 }
 
@@ -248,72 +209,10 @@ td {
         width: 28px;
         margin-left: -2px;
     }
-
-    .info .coin__price h2 {
-        font-size: .9rem;
-    }
-
-    th {
-        font-size: .8rem;
-    }
-
-    td {
-        font-size: .7rem;
-        font-weight: 600;
-        padding-top: 1rem;
-    }
-
-    .stats h5 {
-        font-size: .8rem;
-    }
-
-    .stats p {
-        font-size: .6rem;
-    }
-
-    .about__coin h3 {
-        font-size: 1rem;
-    }
-
-    .about__coin p {
-        font-size: .8rem;
-    }
 }
 
 @media screen and (max-width: 430px) {
-
-    .info p {
-        font-size: .8rem;
-    }
-
-    th {
-        font-size: .9rem;
-    }
-
-    td {
-        font-size: .7rem;
-        font-weight: 600;
-        padding-top: 1rem;
-    }
-
     .stats h5 {
-        font-size: .7rem;
         margin-right: 1rem;
-    }
-
-    .stats p {
-        font-size: .6rem;
-    }
-
-    .about__coin h3 {
-        font-size: 1rem;
-    }
-
-    .about__coin p {
-        font-size: .8rem;
-    }
-
-    .alert__msg {
-        font-size: .8rem;
     }
 }

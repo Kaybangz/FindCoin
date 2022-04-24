@@ -14,7 +14,7 @@ const CoinItem = ({ coin }) => {
         <p>{coin.symbol.toUpperCase()}</p>
       </div>
       <p className="coin__price">{symbol}{coin.current_price.toLocaleString()}</p>
-      <p id="percentage" className={coin.price_change_percentage_24h < 1 ? "red-text" : "green-text"}>{coin.price_change_percentage_24h.toFixed(1)}%</p>
+      <p id="percentage" className={coin.price_change_percentage_24h < 0 ? "red-text" : "green-text"}>{coin.price_change_percentage_24h.toFixed(1)}%</p>
       <p id="coin__volume" className="hide__mobile">{symbol}{coin.total_volume.toLocaleString()}</p>
       <p className="hide__mobile">${coin.market_cap.toLocaleString()}</p>
     </section>

@@ -1,0 +1,18 @@
+.chartBtns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    font-family: inherit;
+}
+
+.chartBtn{
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: 5px;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+}

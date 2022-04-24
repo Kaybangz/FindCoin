@@ -6,6 +6,7 @@ import DomPurify from "dompurify";
 import AddBtn from "../../components/AddToWatchList/AddBtn";
 import { AddBtnContext } from "../../AddBtnContext/AddBtnContext";
 import { CurrencyContext } from "../../CurrencyContext/CurrencyContext";
+import CoinChart from "../../components/CoinChart/CoinChart";
 
 const SingleDisplay = () => {
   //Destructure the props gotten from the AddBtnContext
@@ -20,7 +21,6 @@ const SingleDisplay = () => {
   //Api for displaying a single coin
   const url = `https://api.coingecko.com/api/v3/coins/${id}`;
 
-
   //State management for the single coin
   const [coin, setCoin] = useState({});
 
@@ -28,11 +28,13 @@ const SingleDisplay = () => {
   const fetchSingleCoin = async () => {
     const response = await axios.get(url);
     setCoin(response.data);
+    console.log(response.data)
   };
 
   //Calling the functions in our useLayoutEffect
   useLayoutEffect(() => {
     fetchSingleCoin();
+    window.scrollTo(0, 0);
   }, [url]);
 
   return (
@@ -54,7 +56,7 @@ const SingleDisplay = () => {
         {/* COIN RANK */}
         <div className="content">
           <section className="coin_rank">
-            <span className="rank__btn">Rank # {coin.market_cap_rank}</span>
+            <span className="rank__btn">Rank # {coin?.market_cap_rank}</span>
           </section>
 
           {/* COIN INFO STARTS HERE */}
@@ -98,38 +100,17 @@ const SingleDisplay = () => {
             <tbody>
               <tr>
                 <td>
-                  {coin.market_data?.price_change_percentage_1h_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_1h_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_1h_in_currency.usd.toFixed(
-                        2
-                      )}
+                  {coin.market_data?.price_change_percentage_1h_in_currency < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_1h_in_currency[
+                        currencyValue
+                      ].toFixed(2)}
                       %
                     </p>
-                  )}
-                </td>
-
-                <td>
-                  {coin.market_data
-                    ?.price_change_percentage_24h_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_24h_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_24h_in_currency[
-                        currencyValue.toLowerCase()
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_1h_in_currency[
+                        currencyValue
                       ].toFixed(2)}
                       %
                     </p>
@@ -137,18 +118,17 @@ const SingleDisplay = () => {
                 </td>
 
                 <td>
-                  {coin.market_data?.price_change_percentage_7d_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_7d_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_7d_in_currency[
-                        currencyValue.toLowerCase()
+                  {coin.market_data?.price_change_percentage_24h < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_24h_in_currency[
+                        currencyValue
+                      ].toFixed(2)}
+                      %
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_24h_in_currency[
+                        currencyValue
                       ].toFixed(2)}
                       %
                     </p>
@@ -156,19 +136,17 @@ const SingleDisplay = () => {
                 </td>
 
                 <td>
-                  {coin.market_data
-                    ?.price_change_percentage_14d_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_14d_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_14d_in_currency[
-                        currencyValue.toLowerCase()
+                  {coin.market_data?.price_change_percentage_7d < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_7d_in_currency[
+                        currencyValue
+                      ].toFixed(2)}
+                      %
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_7d_in_currency[
+                        currencyValue
                       ].toFixed(2)}
                       %
                     </p>
@@ -176,19 +154,17 @@ const SingleDisplay = () => {
                 </td>
 
                 <td>
-                  {coin.market_data
-                    ?.price_change_percentage_30d_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_30d_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_30d_in_currency[
-                        currencyValue.toLowerCase()
+                  {coin.market_data?.price_change_percentage_14d < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_14d_in_currency[
+                        currencyValue
+                      ].toFixed(2)}
+                      %
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_14d_in_currency[
+                        currencyValue
                       ].toFixed(2)}
                       %
                     </p>
@@ -196,19 +172,17 @@ const SingleDisplay = () => {
                 </td>
 
                 <td>
-                  {coin.market_data
-                    ?.price_change_percentage_60d_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_60d_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_60d_in_currency[
-                        currencyValue.toLowerCase()
+                  {coin.market_data?.price_change_percentage_30d < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_30d_in_currency[
+                        currencyValue
+                      ].toFixed(2)}
+                      %
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_30d_in_currency[
+                        currencyValue
                       ].toFixed(2)}
                       %
                     </p>
@@ -216,20 +190,27 @@ const SingleDisplay = () => {
                 </td>
 
                 <td>
-                  {coin.market_data?.price_change_percentage_1y_in_currency && (
-                    <p
-                      className={
-                        coin.market_data.price_change_percentage_1y_in_currency[
-                          currencyValue.toLowerCase()
-                        ].toFixed(2) < 1
-                          ? "red-text"
-                          : "green-text"
-                      }
-                    >
-                      {coin.market_data.price_change_percentage_1y_in_currency[
-                        currencyValue.toLowerCase()
-                      ].toFixed(2)}
+                  {coin.market_data?.price_change_percentage_60d < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_60d.toFixed(2)}
                       %
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_60d.toFixed(2)}
+                      %
+                    </p>
+                  )}
+                </td>
+
+                <td>
+                  {coin.market_data?.price_change_percentage_1y < 0 ? (
+                    <p className="red-text">
+                      {coin.market_data?.price_change_percentage_1y.toFixed(2)}%
+                    </p>
+                  ) : (
+                    <p className="green-text">
+                      {coin.market_data?.price_change_percentage_1y.toFixed(2)}%
                     </p>
                   )}
                 </td>
@@ -238,6 +219,10 @@ const SingleDisplay = () => {
           </table>
         </section>
 
+        {/* COIN CHART STARTS HERE */}
+        <section className="content__three">
+          <CoinChart coin={coin} id={id} />
+        </section>
 
         {/* COIN STATS STARTS HERE */}
         <section className="content__three">

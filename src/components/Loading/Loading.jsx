@@ -1,4 +1,3 @@
-import React from 'react';
 import './Loading.css'
 import { Ellipsis } from "react-awesome-spinners";
 

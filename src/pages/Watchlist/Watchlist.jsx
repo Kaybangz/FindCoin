@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useLayoutEffect } from "react";
 import { AddBtnContext } from "../../AddBtnContext/AddBtnContext";
 import { CurrencyContext } from "../../CurrencyContext/CurrencyContext";
 import "./Watchlist.css";
@@ -13,6 +13,10 @@ const Watchlist = () => {
 
     setWatchlisted(existInWatchlist);
   };
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
     <main className="watchlist__wrapper">

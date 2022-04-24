@@ -12,7 +12,7 @@ const Navbar = () => {
       <section className="nav__container">
         <Link to="/" className="home__link">
           <h1>
-            Coin<span>Find</span>
+            Find<span>Coin</span>
           </h1>
         </Link>
 

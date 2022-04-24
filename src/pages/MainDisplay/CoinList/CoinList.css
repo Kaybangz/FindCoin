@@ -1,32 +1,39 @@
-.heading{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   border-radius: 8px;
-   padding: 15px;
-   margin-bottom: 2rem;
-   font-weight: 700;
-   font-size: clamp(1rem, .7rem, .5rem)
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.5vw, 1.1rem)
 }
 
-.coin__name{
-    margin-left: -4rem;
+.coin__name {
+    margin-left: -5.3rem;
 }
 
-.heading p{
+.heading p {
     flex: 1;
 }
 
-.single_coin_link{
+.single_coin_link {
     text-decoration: none;
 }
 
-@media screen and (max-width: 700px){
-    .hide__mobile{
+@media screen and (max-width: 700px) {
+    .hide__mobile {
         display: none;
     }
 
-    .coin__name{
-        margin-left: -1.7rem;
+    .coin__name {
+        margin-left: -2rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .coin__name {
+        margin-left: -5rem;
     }
 }

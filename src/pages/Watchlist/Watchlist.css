@@ -44,7 +44,7 @@
 }
 
 .watchlist__content p{
-    font-size: 1.1rem;
+    font-size: clamp(.8rem, 2.5vw, 1.1rem);
     margin-bottom: .5rem;
 }
 
@@ -64,7 +64,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* justify-content: space-between; */
     }
 
     .coin_info {

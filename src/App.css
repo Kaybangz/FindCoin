@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Work Sans", "sans-serif";
 }
 
 body {
@@ -174,11 +175,18 @@ td {
   color: var(--darkmode-text-color);
 }
 
-#lightTheme .rank__btn, #lightTheme .coin_name, #lightTheme .about__coin h3 {
+#lightTheme .coin_name,
+#lightTheme .about__coin h3 {
   color: var(--lightmode-text-color);
 }
 
-#darkTheme .rank__btn, #darkTheme .coin_name, #darkTheme .about__coin h3 {
+#lightTheme .rank__btn {
+  color: var(--darkmode-text-color);
+}
+
+#darkTheme .rank__btn,
+#darkTheme .coin_name,
+#darkTheme .about__coin h3 {
   color: var(--darkmode-text-color);
 }
 
@@ -194,7 +202,8 @@ td {
   background-color: var(--darkmode-background);
 }
 
-#darkTheme .rank__btn, #darkTheme .coin_name {
+#darkTheme .rank__btn,
+#darkTheme .coin_name {
   color: var(--darkmode-text-color);
 }
 
@@ -214,11 +223,13 @@ td {
   border-bottom: 1px solid var(--darkmode-text-color);
 }
 
-#lightTheme .stats h5, .about__coin h3 {
+#lightTheme .stats h5,
+.about__coin h3 {
   color: var(--lightmode-text-color);
 }
 
-#darkTheme .stats h5, .about__coin h3 {
+#darkTheme .stats h5,
+.about__coin h3 {
   color: var(--darkmode-text-color);
 }
 
@@ -256,4 +267,40 @@ td {
   color: var(--darkmode-text-color);
   border: 1px solid lawngreen;
   box-shadow: 0 0 3px lawngreen;
+}
+
+#lightTheme .chartBtn {
+  background-color: var(--lightmode-navbar-background-color);
+  color: var(--lightmode-text-color);
+  border: 1px solid #b99307;
+  box-shadow: 0 0 3px #927405;
+}
+
+#darkTheme .chartBtn {
+  background-color: var(--darkmode-navbar-background-color);
+  color: var(--darkmode-text-color);
+  border: 1px solid #c29b0c;
+  box-shadow: 0 0 3px #c29b0c;
+}
+
+#lightTheme .chartBtn:hover {
+  transition: all .2s ease-in-out;
+  background-color: #b99307;
+  color: white;
+}
+
+#darkTheme .chartBtn:hover {
+  transition: all .2s ease-in-out;
+  background-color: #c29b0c;
+  color: white;
+}
+
+#lightTheme .chartBtn:active {
+  background-color: #b99307;
+  color: white;
+}
+
+#darkTheme .chartBtn:active {
+  background-color: #c29b0c;
+  color: white;
 }
