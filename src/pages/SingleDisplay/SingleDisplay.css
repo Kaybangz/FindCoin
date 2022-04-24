@@ -106,7 +106,7 @@ th {
 
 th {
     height: 10px;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(.8rem, 2.5vw, 1.2rem);
     padding: .5rem 0;
     border-radius: 5px;
 }
@@ -143,18 +143,18 @@ td {
 }
 
 .stats h5 {
-    font-size: clamp(.9rem, 2.5vw, 1.2rem);
+    font-size: clamp(.8rem, 2.5vw, 1.2rem);
     margin-bottom: .2rem;
     font-weight: 600;
 }
 
 .stats p {
-    font-size: clamp(.8rem, 2.5vw, 1rem);
+    font-size: clamp(.7rem, 2.5vw, 1rem);
     font-weight: 500;
 }
 
 .about__coin h3 {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(.9rem, 2.5vw, 1.2rem);
     margin-bottom: .5rem;
     font-weight: 800;
 }
