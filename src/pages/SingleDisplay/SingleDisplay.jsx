@@ -28,7 +28,6 @@ const SingleDisplay = () => {
   const fetchSingleCoin = async () => {
     const response = await axios.get(url);
     setCoin(response.data);
-    console.log(response.data)
   };
 
   //Calling the functions in our useLayoutEffect

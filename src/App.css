@@ -304,3 +304,11 @@ td {
   background-color: #c29b0c;
   color: white;
 }
+
+#lightTheme footer h2 {
+  color: var(--lightmode-text-color);
+}
+
+#darkTheme footer h2 {
+  color: var(--darkmode-text-color);
+}
