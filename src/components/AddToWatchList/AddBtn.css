@@ -3,8 +3,9 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
     color: #b78700;
+    margin-right: .2rem;
 }
 
 button.shake{

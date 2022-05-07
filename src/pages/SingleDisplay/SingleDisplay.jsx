@@ -48,7 +48,6 @@ const SingleDisplay = () => {
           {/* WATCHLIST BUTTON */}
           <div className="watchlist">
             <AddBtn coin={coin} />
-            <p>Add to watchlist</p>
           </div>
         </header>
 
